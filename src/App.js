@@ -8,7 +8,7 @@ const App = function () {
 	const [email, setEmail] = useState("");
 	useEffect(() => {
 		axios
-			.get("/api/users")
+			.get("./api/users")
 			.then((users) => setUsers(users))
 			.catch((err) => console.log(err));
 	}, []);
@@ -23,7 +23,7 @@ const App = function () {
 			return;
 		}
 		axios
-			.post("/api/users", {
+			.post("./api/users", {
 				username: username,
 				email: email,
 			})
